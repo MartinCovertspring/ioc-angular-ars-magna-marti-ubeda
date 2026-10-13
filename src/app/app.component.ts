@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-root',
   styleUrl: './app.component.scss',
   templateUrl: './app.component.html',
 })
 export class App {
-  protected readonly title = signal('ioc-angular-ars-magna-marti-ubeda');
+  public appTitle = 'Ars Magna';
+  public studentName = 'Martí Úbeda';
+  public projectStatus = 'Projecte base llest';
+  public currentVersion = '1.0.0-ra1';
 }

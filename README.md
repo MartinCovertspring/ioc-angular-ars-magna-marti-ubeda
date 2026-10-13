@@ -1,59 +1,31 @@
-# IocAngularArsMagnaMartiUbeda
+# Ars Magna
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.
+## Autor/a
 
-## Development server
+- **Nom i cognoms:** Martí Úbeda
 
-To start a local development server, run:
+## Descripció
 
-```bash
-ng serve
-```
+Ars Magna és una aplicació dedicada als llibres i a la difusió de la cultura del llibre. Pren com a inspiració l'aplicació GoodReads pel que a les funcions bàsiques de xarxa social, però se'n distancia en la major mesura possible.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+El nóm de l'aplicació és Ars Magna en honor i referència al pare il·lustre de la literatura catalana i de la filosofia de la computació. Ramon Llull no només fou un dels primers en utilitzar la llengua catalana com a vehicle del saber i de la ciència sinó que també fou un dels pares del pensament computacional.
 
-## Code scaffolding
+## Versions utilitzades
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Node.js:** v24.20.0
+- **npm:** 11.19.0
+- **Angular CLI:** 22.2.2
+- **Angular:** 22.2
+- **Git:** 2.53.0
 
-```bash
-ng generate component component-name
-```
+## Com crear i executar el projecte
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+ng new ioc-angular-ars-magna-marti-ubeda --routing=true --style=scss --ssr=false --standalone=true --file-name-style-guide=2016 --skip-git=true --package-manager=npm
 
-```bash
-ng generate --help
-```
+## Estat de l'EAC1
 
-## Building
+Projecte base llest
 
-To build the project run:
+## Enllaç del repositori
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+https://github.com/MartinCovertspring/ioc-angular-ars-magna-marti-ubeda

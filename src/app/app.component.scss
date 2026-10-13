@@ -1,0 +1,82 @@
+// Layout principal amb Flexbox
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; // Separació clara entre blocs
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  h1 {
+    color: #1976d2;
+    margin-top: 0;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  // Estil bàsic per a la targeta de dades
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 0.4rem 0;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // Estil bàsic per a l'aside
+  .info-aside {
+    background-color: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    padding: 1rem;
+    border-radius: 0 6px 6px 0;
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #0d47a1;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  .status-banner {
+    text-align: center;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #c8e6c9;
+  }
+}
