@@ -1,28 +1,5 @@
-<main class="main-container">
-  <h1>{{ appTitle }}</h1>
+<a href="#main-content" class="skip-link">Saltar al contingut principal</a>
 
-  <p class="intro">
-    Projecte desenvolupat per <strong>{{ studentName }}</strong>.
-    Ars Magna és una aplicació dedicada als llibres i a la difusió de la cultura del llibre. Pren com a inspiració l'aplicació GoodReads pel que a les funcions bàsiques de xarxa social, però se'n distancia en la major mesura possible.
-  </p>
-
-  <section class="card">
-    <h2>Dades del Projecte</h2>
-    <ul>
-      <li><strong>Mòdul:</strong> DA2_OA01 - Programació Avançada amb Angular</li>
-      <li><strong>Unitat:</strong> Unitat 1 (RA1)</li>
-      <li><strong>Versió:</strong> {{ currentVersion }}</li>
-      <li><strong>Estat:</strong> {{ projectStatus }}</li>
-    </ul>
-  </section>
-
-
-  <aside class="info-aside">
-    <h3>Nota d'entorn</h3>
-    <p>Aquest projecte ha estat configurat amb Angular 22, utilitzant l'estil de fitxers clàssic i estructurat en branques per a cada RA.</p>
-  </aside>
-
-  <footer class="status-banner">
-    <p><strong>{{ projectStatus }}</strong></p>
-  </footer>
+<main id="main-content">
+  <app-llista-elements></app-llista-elements>
 </main>

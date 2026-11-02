@@ -1,0 +1,31 @@
+<form #filtreForm="ngForm" (ngSubmit)="aplicarFiltres()" class="filter-form">
+
+  <div class="form-group">
+    <label for="filtreText">Cerca per títol:</label>
+    <input type="text" id="filtreText" name="filtreText" [(ngModel)]="filtreText" required minlength="3"
+      #textInput="ngModel" placeholder="Escriu mínim 3 caràcters...">
+
+    <!-- Missatge d'error visible quan el camp no compleix la longitud mínima o s'ha tocat -->
+    <div *ngIf="textInput.invalid && (textInput.dirty || textInput.touched)" class="error-message">
+      <small *ngIf="textInput.errors?.['required']">El camp de cerca és obligatori.</small>
+      <small *ngIf="textInput.errors?.['minlength']">Cal introduir un mínim de 3 caràcters.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" name="categoria" [(ngModel)]="categoriaSeleccionada">
+      <option value="">-- Totes les categories --</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+  </div>
+
+  <div class="form-actions">
+    <!-- Botó d'aplicació deshabilitat quan el formulari és invàlid -->
+    <button type="submit" [disabled]="filtreForm.invalid">Aplicar Filtres</button>
+
+    <!-- Botó específic per restablir -->
+    <button type="button" (click)="restablirFiltres()" class="btn-reset">Restablir</button>
+  </div>
+
+</form>

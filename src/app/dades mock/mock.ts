@@ -1,6 +1,6 @@
-import { ElementArs } from '../models/element.model';
+import { Element } from '../models/element.model';
 
-export const ELEMENTS: ElementArs[] = [
+export const ELEMENTS: Element[] = [
   { 
     id: 1, 
     titol: 'On the road', 

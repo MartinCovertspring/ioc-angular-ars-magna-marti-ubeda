@@ -1,8 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { LlistaElementsComponent } from './components/llista-elements/llista-elements.component';
 
 
 @Component({
-  imports: [],
+  imports: [CommonModule, RouterOutlet, LlistaElementsComponent],
   selector: 'app-root',
   styleUrl: './app.component.scss',
   templateUrl: './app.component.html',

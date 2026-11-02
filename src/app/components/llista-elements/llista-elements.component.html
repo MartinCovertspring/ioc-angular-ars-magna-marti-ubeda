@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Catàleg de Llibres - Ars Magna</h2>
+
+  <!-- Formulari de filtres -->
+  <app-barra-cerca (filtrarEvent)="filtrarElements($event)" (restablirEvent)="restablirFiltres()">
+  </app-barra-cerca>
+
+  <!-- Comptador de resultats -->
+  <div class="counter-results">
+    <p><strong>Resultats trobats:</strong> {{ llibresFiltrats.length }}</p>
+  </div>
+
+  <!-- Panell de detall de l'element seleccionat (Condicional amb @if) -->
+  @if (elementSeleccionat) {
+  <div class="detail-panel">
+    <h3>Detall del Llibre Seleccionat</h3>
+    <p><strong>Títol:</strong> {{ elementSeleccionat.titol }}</p>
+    <p><strong>Categoria:</strong> {{ elementSeleccionat.categoria }}</p>
+    <p><strong>Descripció:</strong> {{ elementSeleccionat.descripcio }}</p>
+    <p><strong>Estrelles:</strong> ⭐ {{ elementSeleccionat.estrelles }}</p>
+    <!-- Ús d'un pipe per formatar la data -->
+    <p><strong>Data de creació:</strong> {{ elementSeleccionat.dataCreacio | date:'dd/MM/yyyy' }}</p>
+    <button (click)="elementSeleccionat = undefined" class="btn-close">Tancar Detall</button>
+  </div>
+  }
+
+  <!-- Llistat de targetes o missatge de buit amb @for / @if / @else -->
+  @if (llibresFiltrats.length > 0) {
+  <div class="grid">
+    @for (llibre of llibresFiltrats; track llibre.id) {
+    <app-targeta-element [element]="llibre" (seleccionat)="seleccionarElement($event)">
+    </app-targeta-element>
+    }
+  </div>
+  } @else {
+  <div class="empty-state">
+    <p> No s'ha trobat cap element que coincideixi amb els criteris de cerca.</p>
+  </div>
+  }
+</div>

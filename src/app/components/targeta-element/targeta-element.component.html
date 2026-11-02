@@ -1,0 +1,14 @@
+<div class="card" (click)="onSelect()">
+  <div class="card-header">
+    <h3>{{ element.titol }}</h3>
+    <app-etiqueta-categoria 
+      [categoria]="element.categoria" 
+      [esDestacat]="element.destacat || false">
+    </app-etiqueta-categoria>
+  </div>
+  <p>{{ element.descripcio }}</p>
+  <div class="card-footer">
+    <span>⭐ Estrelles: {{ element.estrelles }}</span>
+    <span>📅 {{ element.dataCreacio }}</span>
+  </div>
+</div>
