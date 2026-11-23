@@ -18,7 +18,7 @@
     <p><strong>Categoria:</strong> {{ elementSeleccionat.categoria }}</p>
     <p><strong>Descripció:</strong> {{ elementSeleccionat.descripcio }}</p>
     <p><strong>Estrelles:</strong> ⭐ {{ elementSeleccionat.estrelles }}</p>
-    <!-- Ús d'un pipe per formatar la data -->
+    <!-- pipe per formatar la data -->
     <p><strong>Data de creació:</strong> {{ elementSeleccionat.dataCreacio | date:'dd/MM/yyyy' }}</p>
     <button (click)="elementSeleccionat = undefined" class="btn-close">Tancar Detall</button>
   </div>
